@@ -12,12 +12,3 @@ document.getElementById("poolCards").innerHTML=CARD_POOL_INFO.cards.map(c=>`
  <b>${c.name}</b>
  <div class="mini">${c.code}${c.limited?" · LIMITED":""}</div>
 </div>`).join("");
-
-const custom=JSON.parse(localStorage.getItem("astra_custom_card_pool")||"[]");
-document.getElementById("customPoolCards").innerHTML=custom.length?custom.slice().reverse().map(c=>`
-<div class="gachaCard">
- <img src="${c.image}">
- <div class="stars">${"★".repeat(c.stars)}</div>
- <b>${c.name}</b>
- <div class="mini">${c.code} · ${c.season||""} ${c.region||""}</div>
-</div>`).join(""):`<div class="mini">目前還沒有自動生成卡。去卡牌工坊產出。</div>`;
