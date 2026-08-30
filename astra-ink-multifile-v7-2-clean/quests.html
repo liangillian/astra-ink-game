@@ -1,0 +1,22 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>任務與星鑽｜ASTRA:INK</title><link rel="stylesheet" href="styles.css"></head><body><div class="wrap">
+<nav class="nav"><a href="index.html">主程式</a><a href="login.html">帳號</a><a href="profile.html">玩家</a><a href="members.html">成員</a><a href="growth.html">養成</a><a class="active" href="quests.html">任務</a><a href="memories.html">記憶檔案</a><a href="gacha.html">抽卡</a><a href="cardpool.html">卡池</a><a href="music.html">音樂</a></nav>
+
+<div class="panel">
+ <div class="kicker">PLAYER REWARDS</div><h1>星鑽與任務</h1>
+ <div class="infoGrid">
+   <div class="infoBox"><b>目前星鑽</b><div id="currentGems" style="font-size:32px;font-weight:900;margin-top:4px"></div></div>
+   <div class="infoBox"><b>累積獲得</b><div id="lifetimeGems" style="font-size:32px;font-weight:900;margin-top:4px"></div></div>
+ </div>
+ <div style="margin-top:16px">
+   <div class="mini" style="display:flex;justify-content:space-between"><span>星鑽累積進度</span><span id="gemMilestoneText"></span></div>
+   <div style="height:14px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:7px">
+     <i id="gemProgressBar" style="display:block;height:100%;width:0;background:linear-gradient(90deg,#7764ff,#f0cb72,#ff8b36)"></i>
+   </div>
+ </div>
+</div>
+
+<div class="panel" style="margin-top:14px"><h2>每日任務</h2><div id="dailyQuests"></div></div>
+<div class="panel" style="margin-top:14px"><h2>每週任務</h2><div id="weeklyQuests"></div></div>
+<div class="panel" style="margin-top:14px"><h2>成就任務</h2><div id="achievementQuests"></div></div>
+</div><script src="data.js"></script><script src="common.js"></script><script src="quests.js"></script><script type="module" src="cloud-autosync.js"></script></body></html>

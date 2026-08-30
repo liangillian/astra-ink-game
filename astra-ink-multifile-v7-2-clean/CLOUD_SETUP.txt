@@ -1,0 +1,18 @@
+ASTRA:INK V6 雲端存檔設定
+
+建議：Supabase（Google OAuth + PostgreSQL）
+
+1. 建立 Supabase 專案。
+2. 在 SQL Editor 執行 supabase-schema.sql。
+3. Authentication -> Providers -> Google，開啟 Google provider。
+4. 到 Google Cloud Console 建立 OAuth Client。
+5. 把 Supabase 提供的 callback URL 加到 Google OAuth Authorized redirect URIs。
+6. 在 Supabase 的 URL / Redirect URLs 加入你的 GitHub Pages 網址。
+7. 把 Project URL 與 anon public key 填入 cloud-config.js。
+8. 重新上傳整個網站到 GitHub Pages。
+9. 打開 login.html 測試 Google 登入、上傳與下載存檔。
+
+安全提醒：
+- 可以把 Supabase anon public key 放前端，前提是有開 RLS。
+- 絕對不要把 service_role key 放進 GitHub。
+- Excel 不適合當線上即時資料庫；可以之後另外做管理員匯出 CSV/XLSX。

@@ -1,0 +1,30 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>帳號與雲端存檔｜ASTRA:INK</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="wrap">
+<nav class="nav"><a href="index.html">主程式</a><a href="login.html" class="active">帳號</a><a href="profile.html">玩家</a><a href="members.html">成員</a><a href="growth.html">養成</a><a href="quests.html">任務</a><a href="memories.html">記憶檔案</a><a href="gacha.html">抽卡</a><a href="cardpool.html">卡池</a><a href="music.html">音樂</a></nav>
+
+<div class="panel">
+  <div class="kicker">ACCOUNT & CLOUD SAVE</div>
+  <h1>Google 帳號 / 雲端存檔</h1>
+  <p>登入後，可以把目前瀏覽器的遊戲進度同步到 PostgreSQL 資料庫。</p>
+  <div id="accountState" class="mini">讀取中...</div>
+  <div class="musicRow" style="margin-top:14px">
+    <button id="loginBtn" class="btn gold">使用 Google 登入</button>
+    <button id="uploadBtn" class="btn primary">上傳目前進度</button>
+    <button id="downloadBtn" class="btn">下載雲端進度</button>
+    <button id="logoutBtn" class="btn">登出</button>
+  </div>
+  <div id="syncMsg" class="mini" style="margin-top:12px"></div>
+</div>
+
+<div class="panel" style="margin-top:14px">
+  <h2>存檔方式</h2>
+  <ul class="mini">
+    <li>本機：localStorage，離線也能玩。</li>
+    <li>雲端：Supabase PostgreSQL，一個 Google 帳號對應一份主存檔。</li>
+    <li>資料內容：角色好感、養成、卡池、抽卡、記憶、玩家名稱、音樂設定等。</li>
+  </ul>
+</div>
+</div>
+<script type="module" src="login.js"></script>
+</body></html>
