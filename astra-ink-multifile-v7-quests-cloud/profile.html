@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>玩家資料｜ASTRA:INK</title><link rel="stylesheet" href="styles.css"></head><body><div class="wrap">
+<nav class="nav"><a href="index.html">主程式</a><a href="login.html">帳號</a><a href="profile.html" class="active">玩家</a><a href="members.html">成員</a><a href="growth.html">養成</a><a href="quests.html">任務</a><a href="memories.html">記憶檔案</a><a href="gacha.html">抽卡</a><a href="cardpool.html">卡池</a><a href="cardfactory.html">卡牌工坊</a><a href="music.html">音樂</a></nav>
+<div class="panel">
+  <div class="kicker">PLAYER PROFILE</div>
+  <h1>你的企劃檔案</h1>
+  <p>名字會被保存，之後角色可以在劇情裡直接叫你。</p>
+  <div class="infoGrid">
+    <div class="infoBox"><b>本名 / 顯示名稱</b><input id="playerName" style="width:100%;margin-top:8px;padding:12px;border-radius:12px;border:1px solid var(--line);background:#0d1123;color:white" placeholder="例如：勻"></div>
+    <div class="infoBox"><b>想被怎麼稱呼</b><input id="playerNickname" style="width:100%;margin-top:8px;padding:12px;border-radius:12px;border:1px solid var(--line);background:#0d1123;color:white" placeholder="例如：企劃、阿勻"></div>
+  </div>
+  <div class="musicRow" style="margin-top:14px"><button class="btn gold" id="saveProfileBtn">儲存名字</button><span id="profileSaved" class="mini"></span></div>
+</div>
+<div class="panel" style="margin-top:14px">
+  <h2>稱呼預覽</h2>
+  <div class="dialogue">
+    <div class="bubble them">陸燼：「<span data-preview></span>，剛剛那版妳有聽吧？」</div>
+    <div class="bubble them">白予澈：「<span data-preview></span>，九點的會議不要遲到。」</div>
+    <div class="bubble them">夏曜安：「<span data-preview></span>！等一下來看我走位。」</div>
+    <div class="bubble them">沈律衡：「<span data-preview></span>，先吃飯。」</div>
+  </div>
+</div>
+</div><script src="common.js"></script><script src="profile.js"></script><script type="module" src="cloud-autosync.js"></script></body></html>

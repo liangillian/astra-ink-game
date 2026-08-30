@@ -1,0 +1,24 @@
+ASTRA:INK V7 資料庫安全層級
+
+目前已串接：
+1. Google OAuth 登入
+2. Supabase PostgreSQL
+3. Row Level Security (RLS)：玩家只能讀寫自己的 game_saves
+4. localStorage 離線存檔
+5. 登入後自動雲端同步（debounce）
+6. game_saves 保存完整遊戲進度 JSON
+
+重要限制：
+- game_saves 是「私人、安全存取」的雲端存檔，但不是防作弊資料庫。
+- 因為前端 JavaScript 在玩家電腦上，玩家仍可能修改 localStorage / DevTools 後再上傳。
+
+如果未來要有真實付費、排行榜、競技或需要防作弊：
+- 星鑽餘額、抽卡 RNG、任務獎勵必須搬到伺服器端。
+- 建議用 Supabase Edge Functions。
+- gem_ledger 已在 supabase-schema.sql 建立讀取權限，但沒有給瀏覽器直接寫入權限。
+- 由 Edge Function 驗證任務／付款／抽卡後，再用 service_role 寫入 ledger。
+- service_role 絕對不能放 GitHub 或任何前端 JS。
+
+Excel：
+- 不適合作為線上主資料庫。
+- 可以由 PostgreSQL 定期匯出 CSV / XLSX 給管理員做報表。
